@@ -14,6 +14,7 @@ const json = require('rollup-plugin-json')
 const cssOnly = require('rollup-plugin-css-only')
 const replace = require('rollup-plugin-replace')
 const { green, blue } = require('colorette')
+const CLASS_NAMESPACE = require('./class.namespace')
 
 const BANNER = `/**!
 * tippy.js v${pkg.version}
@@ -21,7 +22,7 @@ const BANNER = `/**!
 * MIT License
 */`
 
-const NAMESPACE_PREFIX = process.env.NAMESPACE || 'tippy'
+const NAMESPACE_PREFIX = CLASS_NAMESPACE;
 
 const extensions = ['.js', '.ts']
 
